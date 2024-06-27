@@ -9,7 +9,7 @@
     "local": "ts-node src",
     "local:watch": "nodemon src -e ts,json --exec 'npm run local'",
     "test": "echo \"No tests specified\"",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "Rishabh Bhardwaj",
@@ -25,7 +25,7 @@
     "prettier": "3.3.2",
     "rimraf": "^5.0.7",
     "ts-node": "^10.9.2",
-    
+
     "typescript": "^5.5.2",
     "typescript-eslint": "^7.14.1"
   },
