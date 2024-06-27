@@ -8,7 +8,7 @@
     "start": "node src",
     "local": "ts-node src",
     "local:watch": "nodemon src -e ts,json --exec 'npm run local'",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests specified\"",
     "prepare": "husky"
   },
   "keywords": [],
