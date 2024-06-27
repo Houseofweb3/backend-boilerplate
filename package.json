@@ -8,13 +8,15 @@
     "start": "node src",
     "local": "ts-node src",
     "local:watch": "nodemon src -e ts,json --exec 'npm run local'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "Rishabh Bhardwaj",
   "license": "ISC",
   "description": "This is a node, express, typeorm and typescript.",
   "devDependencies": {
+    "@eslint/js": "^9.5.0",
     "@types/node": "^20.14.9",
     "eslint": "^9.5.0",
     "globals": "^15.6.0",
@@ -23,11 +25,24 @@
     "prettier": "3.3.2",
     "rimraf": "^5.0.7",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.2",
+    "typescript-eslint": "^7.14.1"
   },
   "dependencies": {
     "express": "^4.19.2",
     "winston": "^3.13.0",
     "winston-daily-rotate-file": "^5.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,json}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
