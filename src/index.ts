@@ -1,22 +1,30 @@
-import http, { IncomingMessage, ServerResponse } from 'http';
-import logger from './config/logger';
+import swaggerJsdoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
+import express, { Application, Request, Response } from 'express';
+import { createServer, Server as HttpServer } from 'http';
 
-/**
- * Creates an HTTP server that responds with a JSON message.
- *
- * @param {IncomingMessage} req - The incoming request object.
- * @param {ServerResponse} res - The server response object.
- * @returns {http.Server} The created HTTP server.
- */
-export const server = http.createServer((req: IncomingMessage, res: ServerResponse) => {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(
-        JSON.stringify({
-            data: 'It Works!',
-        }),
-    );
+import routes from './routes';
+import logger from './config/logger';
+import swaggerDocument from './swagger.json';
+
+const app: Application = express();
+const port: number = process.env.PORT ? parseInt(process.env.PORT) : 3000;
+
+const options = {
+    swaggerDefinition: swaggerDocument,
+    apis: ['./src/routes/*.ts', './src/models/*.ts'], // Path to the API docs
+};
+  
+const specs = swaggerJsdoc(options);
+
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs));
+app.use('/api', routes);
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello World!');
 });
 
-server.listen(3000, () => {
-    logger.info('Server running on http://localhost:3000/');
+const server: HttpServer = createServer(app);
+
+server.listen(port, () => {
+  logger.info(`Server is running on port ${port}`);
 });

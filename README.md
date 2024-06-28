@@ -65,6 +65,7 @@
 - `docker run -d -p 3000:3000 your-image-name` e.x. `docker run -d -p 3000:3000 kol-tool`
 
 #### Swagger
+- Swagger documentation can be viewed at <base-url>/docs
 
 #### API Collection
 - We use postman for documenting and testing our APIs.
