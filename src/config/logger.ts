@@ -55,7 +55,7 @@ const logger = winston.createLogger({
     format: logFormat,
     transports: [
         consoleTransport,
-        fileTransport // Add file transport if needed
+        fileTransport, // Add file transport if needed
     ],
 });
 
