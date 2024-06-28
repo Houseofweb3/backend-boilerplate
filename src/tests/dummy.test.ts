@@ -2,6 +2,6 @@
 
 describe('Dummy Test', () => {
     it('should pass this dummy test', () => {
-      expect(true).toBe(true);
+        expect(true).toBe(true);
     });
 });
