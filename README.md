@@ -2,10 +2,6 @@
 
 - `npm run clean`
 
-#### Removes the dist directory.
-
-- `npm run clean`
-
 #### Cleans the dist directory and compiles TypeScript files.
 
 - `npm run build`
@@ -18,7 +14,7 @@
 
 - `npm run local`
 
-#### Runs the application on local.
+#### Runs the application on local(**recommended*).
 
 - `npm run local:watch`
 
