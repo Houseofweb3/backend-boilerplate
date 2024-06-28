@@ -1,3 +1,3 @@
 export const hooks = {
-    'pre-commit': 'eslint .',
+    'pre-commit': 'eslint src/**/*.{ts,tsx}',
 };
