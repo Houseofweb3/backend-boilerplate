@@ -30,17 +30,21 @@
 
 - `npx eslint <path-to-your-file>.<js/ts>`
 
-#### Command to run eslint on whole project.
+#### Command to run eslint on project(src/*).
 
-- `npx run .`
+- `npm run lint`
 
 #### Command to run prettier on specific file.
 
 - `npx prettier package.json --write`
 
-#### Command to format the entire project with prettier
+#### Command to prettier on the entire project with prettier(src/*).
 
-- `prettier --write .`
+- `npm run pretty`
+
+#### Command to run eslint and prettier on the entire project(src/*).
+
+- `npm run format-and-lint`
 
 #### Different logging levels in winston
 
