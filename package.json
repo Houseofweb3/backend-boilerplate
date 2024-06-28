@@ -6,9 +6,7 @@
     "clean": "rimraf ./dist",
     "build": "npm run clean && tsc -b",
     "start": "node src",
-
     "local": "ts-node src",
-    
     "local:watch": "nodemon src -e ts,json --exec 'npm run local'",
     "test": "echo \"No tests specified\"",
     "prepare": "husky"
