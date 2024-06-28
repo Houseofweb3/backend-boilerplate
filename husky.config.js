@@ -1,6 +1,3 @@
-module.exports = {
-    hooks: {
-      "pre-commit": "eslint ."
-    }
-  };
-  
+export const hooks = {
+    'pre-commit': 'eslint .',
+};
