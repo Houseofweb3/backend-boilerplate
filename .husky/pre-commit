@@ -1,1 +1,1 @@
-npm run format-and-lint
+npm run format-and-lint && npm test

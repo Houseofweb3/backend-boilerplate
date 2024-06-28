@@ -62,7 +62,12 @@
 
 - `docker build -t <your-image-name> .` e.x. `docker build -t kol-tool .`
 
-- `docker run -d -p 3000:3000 your-image-name` e.x. `docker run -d -p 3000:3000 your-image-name`
+- `docker run -d -p 3000:3000 your-image-name` e.x. `docker run -d -p 3000:3000 kol-tool`
+
+#### Swagger
+
+#### API Collection
+- We use postman for documenting and testing our APIs.
 
 #### Different logging levels in winston
 
