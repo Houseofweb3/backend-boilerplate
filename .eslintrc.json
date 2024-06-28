@@ -1,9 +1,18 @@
 {
-    "extends": ["eslint:recommended"],
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": ["@typescript-eslint", "prettier"],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-    "ecmaVersion": 2021
+      "project": "./tsconfig.json",
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "modules": true
+      }
     },
     "rules": {
-    // Your custom rules here
+      "prettier/prettier": ["error"]
     }
 }
