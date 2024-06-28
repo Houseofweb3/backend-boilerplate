@@ -13,7 +13,7 @@ const router = Router();
  *         description: Successful response
  */
 router.get('/example', (req: Request, res: Response) => {
-  res.status(200).json({ message: 'Example endpoint' });
+    res.status(200).json({ message: 'Example endpoint' });
 });
 
 export default router;
