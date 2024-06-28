@@ -42,6 +42,28 @@
 
 - `npm run format-and-lint`
 
+#### Branching strategy
+- `main` 
+1. This is production branch. Never touch it or there will be terrible consequences.:)
+2. We will only merge dev rom into main branch
+- `dev`
+1. Always take feature branch from dev branch and merge it in this branch.
+2. This branch will also be deployed for testing purposes.
+- `####-<feature-info>`
+1. '####' = Ticket/Card number. Properly describe the feature that you are working on.
+2. Once approved. This branch will be merged into dev branch.
+
+#### Commit strategy
+- `git commit -m '####-<meaningful-commit>`
+1. '####' = Ticket/Card number. Properly describe the feature on which you worked through meaningful commit message.
+2. Writing bad commit comments will have dangerous consequences. 😈
+
+#### Commands to build and run the docker container(detached mode)
+
+- `docker build -t <your-image-name> .` e.x. `docker build -t kol-tool .`
+
+- `docker run -d -p 3000:3000 your-image-name` e.x. `docker run -d -p 3000:3000 your-image-name`
+
 #### Different logging levels in winston
 
 ```
