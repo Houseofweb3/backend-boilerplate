@@ -1,6 +1,6 @@
 #### Removes the dist directory.
 
-- `npm run clean`
+- ```npm run clean```
 
 #### Cleans the dist directory and compiles TypeScript files.
 
